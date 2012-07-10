@@ -1,0 +1,11 @@
+var a = 1, x = 0;
+while(a < 4){
+    inc();
+    a = a + 1;
+}
+
+OUTPUT x;
+
+function inc(){
+    x = x + 1;
+}

@@ -1,0 +1,9 @@
+function test(){
+  OUTPUT 5;
+}
+
+function other(){
+  OUTPUT 10;
+}
+
+test();

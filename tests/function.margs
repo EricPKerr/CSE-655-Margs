@@ -1,0 +1,5 @@
+function test(){
+  OUTPUT 5;
+}
+
+test();

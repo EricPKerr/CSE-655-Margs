@@ -1,0 +1,386 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module translator.nodes</title><link rel="stylesheet" type="text/css" href="style.css" />
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading" class="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="translator.html"><font color="#ffffff">translator</font></a>.nodes</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href="index.html">index</a><br><a href="file:/Users/ericpkerr/Desktop/PL0/translator/nodes.py">/Users/ericpkerr/Desktop/PL0/translator/nodes.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="translator.nodes.html#Node">Node</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="translator.nodes.html#Comparison">Comparison</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Condition">Condition</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Declaration">Declaration</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Declaration_List">Declaration_List</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Expression">Expression</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Function">Function</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Parameters">Parameters</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Program">Program</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Statement">Statement</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Statement_Conditional">Statement_Conditional</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Statement_Empty">Statement_Empty</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Statement_Function_Call">Statement_Function_Call</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Statement_IO">Statement_IO</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Statement_Iteration">Statement_Iteration</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Statement_List">Statement_List</a>
+</font></dt><dt><font face="helvetica, arial"><a href="translator.nodes.html#Statement_Var">Statement_Var</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Comparison">class <strong>Comparison</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Comparison">Comparison</a>&nbsp;node&nbsp;from&nbsp;the&nbsp;Grammar.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Comparison-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Comparison-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Comparison-compile"><strong>compile</strong></a>(self, indent<font color="#909090">=0</font>, inverse<font color="#909090">=False</font>)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>inverted</strong> = {'!=': '=', '&lt;': '&gt;', '&lt;=': '&gt;=', '==': '#', '&gt;': '&lt;', '&gt;=': '&lt;='}</dl>
+
+<dl><dt><strong>normal</strong> = {'!=': '#', '&lt;': '&lt;', '&lt;=': '&lt;=', '==': '=', '&gt;': '&gt;', '&gt;=': '&gt;='}</dl>
+
+<hr>
+Methods inherited from <a href="translator.nodes.html#Node">Node</a>:<br>
+<dl><dt><a name="Comparison-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Prepare&nbsp;the&nbsp;node&nbsp;to&nbsp;be&nbsp;translated&nbsp;to&nbsp;PL/0.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Condition">class <strong>Condition</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Condition">Condition</a>&nbsp;node&nbsp;from&nbsp;the&nbsp;Grammar.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Condition-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Condition-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Condition-compile"><strong>compile</strong></a>(self, indent<font color="#909090">=0</font>, inverse<font color="#909090">=False</font>)</dt></dl>
+
+<hr>
+Methods inherited from <a href="translator.nodes.html#Node">Node</a>:<br>
+<dl><dt><a name="Condition-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Prepare&nbsp;the&nbsp;node&nbsp;to&nbsp;be&nbsp;translated&nbsp;to&nbsp;PL/0.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Declaration">class <strong>Declaration</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Declaration">Declaration</a>&nbsp;node&nbsp;from&nbsp;the&nbsp;Grammar.&nbsp;Can&nbsp;either&nbsp;be&nbsp;an&nbsp;assignment&nbsp;(&lt;identifier&gt;&nbsp;=&nbsp;&lt;expression&gt;)&nbsp;or&nbsp;just&nbsp;an&nbsp;&lt;identifier&gt;.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Declaration-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Declaration-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Declaration-compile"><strong>compile</strong></a>(self, indent<font color="#909090">=0</font>)</dt></dl>
+
+<hr>
+Methods inherited from <a href="translator.nodes.html#Node">Node</a>:<br>
+<dl><dt><a name="Declaration-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Prepare&nbsp;the&nbsp;node&nbsp;to&nbsp;be&nbsp;translated&nbsp;to&nbsp;PL/0.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Declaration_List">class <strong>Declaration_List</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Declaration_List">Declaration_List</a>&nbsp;node&nbsp;from&nbsp;the&nbsp;grammar.&nbsp;&nbsp;Holds&nbsp;a&nbsp;list&nbsp;of&nbsp;Declarations.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Declaration_List-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Declaration_List-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Declaration_List-compile"><strong>compile</strong></a>(self, indent<font color="#909090">=0</font>)</dt></dl>
+
+<hr>
+Methods inherited from <a href="translator.nodes.html#Node">Node</a>:<br>
+<dl><dt><a name="Declaration_List-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Prepare&nbsp;the&nbsp;node&nbsp;to&nbsp;be&nbsp;translated&nbsp;to&nbsp;PL/0.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Expression">class <strong>Expression</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Expression">Expression</a>&nbsp;node&nbsp;from&nbsp;the&nbsp;Grammar.&nbsp;&nbsp;Can&nbsp;hold&nbsp;any&nbsp;expression&nbsp;or&nbsp;a&nbsp;single&nbsp;identifier.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Expression-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Expression-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Expression-compile"><strong>compile</strong></a>(self, indent<font color="#909090">=0</font>)</dt></dl>
+
+<hr>
+Methods inherited from <a href="translator.nodes.html#Node">Node</a>:<br>
+<dl><dt><a name="Expression-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Prepare&nbsp;the&nbsp;node&nbsp;to&nbsp;be&nbsp;translated&nbsp;to&nbsp;PL/0.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Function">class <strong>Function</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Function">Function</a>&nbsp;node&nbsp;from&nbsp;the&nbsp;Grammar.&nbsp;&nbsp;Holds&nbsp;all&nbsp;information&nbsp;corresponding&nbsp;to&nbsp;a&nbsp;given&nbsp;function&nbsp;in&nbsp;the&nbsp;<a href="#Program">Program</a>.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Function-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Function-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Function-clean"><strong>clean</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Function-compile"><strong>compile</strong></a>(self, indent<font color="#909090">=0</font>)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Node">class <strong>Node</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Abstract&nbsp;base&nbsp;class&nbsp;for&nbsp;all&nbsp;nodes&nbsp;within&nbsp;the&nbsp;language&nbsp;Grammar.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Node-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt><dd><tt>Initializer&nbsp;for&nbsp;the&nbsp;<a href="#Node">Node</a>.</tt></dd></dl>
+
+<dl><dt><a name="Node-build"><strong>build</strong></a>(self)</dt><dd><tt>Use&nbsp;and&nbsp;consume&nbsp;the&nbsp;tokens&nbsp;to&nbsp;build&nbsp;an&nbsp;abstract&nbsp;syntax&nbsp;tree.</tt></dd></dl>
+
+<dl><dt><a name="Node-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Prepare&nbsp;the&nbsp;node&nbsp;to&nbsp;be&nbsp;translated&nbsp;to&nbsp;PL/0.</tt></dd></dl>
+
+<dl><dt><a name="Node-compile"><strong>compile</strong></a>(self, indent<font color="#909090">=0</font>)</dt><dd><tt>Generate&nbsp;the&nbsp;compiled&nbsp;PL/0&nbsp;code&nbsp;for&nbsp;the&nbsp;given&nbsp;node.<br>
+indent&nbsp;(int,&nbsp;optional):&nbsp;The&nbsp;level&nbsp;of&nbsp;indentation&nbsp;for&nbsp;the&nbsp;given&nbsp;node&nbsp;in&nbsp;the&nbsp;compiled&nbsp;program.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Parameters">class <strong>Parameters</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Paramters&nbsp;node&nbsp;type&nbsp;from&nbsp;the&nbsp;Grammar.&nbsp;Used&nbsp;for&nbsp;&lt;CALL&gt;&nbsp;and&nbsp;&lt;FUNCTION&gt;.<br>
+TODO:&nbsp;Doesn't&nbsp;support&nbsp;expressions&nbsp;in&nbsp;call,&nbsp;only&nbsp;&lt;IDENTIFIER&gt;&nbsp;and&nbsp;&lt;NUMBER&gt;<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Parameters-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Parameters-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Parameters-compile"><strong>compile</strong></a>(self, indent<font color="#909090">=0</font>)</dt></dl>
+
+<hr>
+Methods inherited from <a href="translator.nodes.html#Node">Node</a>:<br>
+<dl><dt><a name="Parameters-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Prepare&nbsp;the&nbsp;node&nbsp;to&nbsp;be&nbsp;translated&nbsp;to&nbsp;PL/0.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Program">class <strong>Program</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Program">Program</a>&nbsp;node&nbsp;type&nbsp;from&nbsp;the&nbsp;Grammar.&nbsp;&nbsp;Parent&nbsp;node&nbsp;type&nbsp;which&nbsp;calls&nbsp;all&nbsp;parent&nbsp;build&nbsp;/&nbsp;clean&nbsp;methods&nbsp;in&nbsp;the&nbsp;recursive&nbsp;descent&nbsp;parser.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Program-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Program-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Program-clean"><strong>clean</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Program-compile"><strong>compile</strong></a>(self, indent<font color="#909090">=0</font>)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Statement">class <strong>Statement</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Base&nbsp;<a href="#Statement">Statement</a>&nbsp;node&nbsp;type&nbsp;from&nbsp;the&nbsp;Grammar.&nbsp;&nbsp;Used&nbsp;to&nbsp;dispatch&nbsp;between&nbsp;all&nbsp;other&nbsp;<a href="#Statement">Statement</a>&nbsp;node&nbsp;types<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Statement-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Statement-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statement-clean"><strong>clean</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statement-compile"><strong>compile</strong></a>(self, indent<font color="#909090">=0</font>)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Statement_Conditional">class <strong>Statement_Conditional</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Statement_Conditional">Statement_Conditional</a>&nbsp;node&nbsp;type&nbsp;from&nbsp;the&nbsp;Grammar.&nbsp;&nbsp;Used&nbsp;to&nbsp;build&nbsp;IF&nbsp;and&nbsp;IF&nbsp;/&nbsp;ELSE&nbsp;blocks.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Statement_Conditional-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Statement_Conditional-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statement_Conditional-compile"><strong>compile</strong></a>(self, indent)</dt></dl>
+
+<hr>
+Methods inherited from <a href="translator.nodes.html#Node">Node</a>:<br>
+<dl><dt><a name="Statement_Conditional-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Prepare&nbsp;the&nbsp;node&nbsp;to&nbsp;be&nbsp;translated&nbsp;to&nbsp;PL/0.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Statement_Empty">class <strong>Statement_Empty</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Empty&nbsp;<a href="#Statement">Statement</a>&nbsp;node&nbsp;type&nbsp;from&nbsp;the&nbsp;Grammar.&nbsp;&nbsp;Used&nbsp;for&nbsp;no&nbsp;reason&nbsp;other&nbsp;than&nbsp;support&nbsp;extraneous&nbsp;';'&nbsp;in&nbsp;the&nbsp;code<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Statement_Empty-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Statement_Empty-build"><strong>build</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="translator.nodes.html#Node">Node</a>:<br>
+<dl><dt><a name="Statement_Empty-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Prepare&nbsp;the&nbsp;node&nbsp;to&nbsp;be&nbsp;translated&nbsp;to&nbsp;PL/0.</tt></dd></dl>
+
+<dl><dt><a name="Statement_Empty-compile"><strong>compile</strong></a>(self, indent<font color="#909090">=0</font>)</dt><dd><tt>Generate&nbsp;the&nbsp;compiled&nbsp;PL/0&nbsp;code&nbsp;for&nbsp;the&nbsp;given&nbsp;node.<br>
+indent&nbsp;(int,&nbsp;optional):&nbsp;The&nbsp;level&nbsp;of&nbsp;indentation&nbsp;for&nbsp;the&nbsp;given&nbsp;node&nbsp;in&nbsp;the&nbsp;compiled&nbsp;program.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Statement_Function_Call">class <strong>Statement_Function_Call</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Function">Function</a>&nbsp;Call&nbsp;statements&nbsp;node&nbsp;type&nbsp;from&nbsp;the&nbsp;Grammar.&nbsp;&nbsp;Used&nbsp;when&nbsp;calling&nbsp;a&nbsp;function&nbsp;and&nbsp;optionally&nbsp;passing&nbsp;parameters.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Statement_Function_Call-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Statement_Function_Call-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statement_Function_Call-compile"><strong>compile</strong></a>(self, indent)</dt></dl>
+
+<hr>
+Methods inherited from <a href="translator.nodes.html#Node">Node</a>:<br>
+<dl><dt><a name="Statement_Function_Call-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Prepare&nbsp;the&nbsp;node&nbsp;to&nbsp;be&nbsp;translated&nbsp;to&nbsp;PL/0.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Statement_IO">class <strong>Statement_IO</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;Input/Output&nbsp;<a href="#Statement">Statement</a>&nbsp;node&nbsp;type&nbsp;from&nbsp;the&nbsp;grammar.&nbsp;&nbsp;Used&nbsp;to&nbsp;input&nbsp;and&nbsp;view&nbsp;data&nbsp;/&nbsp;results.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Statement_IO-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Statement_IO-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statement_IO-compile"><strong>compile</strong></a>(self, indent)</dt></dl>
+
+<hr>
+Methods inherited from <a href="translator.nodes.html#Node">Node</a>:<br>
+<dl><dt><a name="Statement_IO-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Prepare&nbsp;the&nbsp;node&nbsp;to&nbsp;be&nbsp;translated&nbsp;to&nbsp;PL/0.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Statement_Iteration">class <strong>Statement_Iteration</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;Iteration&nbsp;<a href="#Statement">Statement</a>&nbsp;type.&nbsp;&nbsp;Used&nbsp;to&nbsp;generate&nbsp;WHILE&nbsp;loops.<br>
+TODO:&nbsp;implement&nbsp;for&nbsp;loops&nbsp;and&nbsp;translate&nbsp;them&nbsp;to&nbsp;a&nbsp;functionally&nbsp;equivalent&nbsp;WHILE&nbsp;loop.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Statement_Iteration-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Statement_Iteration-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statement_Iteration-compile"><strong>compile</strong></a>(self, indent)</dt></dl>
+
+<hr>
+Methods inherited from <a href="translator.nodes.html#Node">Node</a>:<br>
+<dl><dt><a name="Statement_Iteration-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Prepare&nbsp;the&nbsp;node&nbsp;to&nbsp;be&nbsp;translated&nbsp;to&nbsp;PL/0.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Statement_List">class <strong>Statement_List</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>List&nbsp;<a href="#Statement">Statement</a>&nbsp;node&nbsp;type&nbsp;from&nbsp;the&nbsp;Grammar.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Statement_List-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Statement_List-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statement_List-compile"><strong>compile</strong></a>(self, indent)</dt></dl>
+
+<hr>
+Methods inherited from <a href="translator.nodes.html#Node">Node</a>:<br>
+<dl><dt><a name="Statement_List-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Prepare&nbsp;the&nbsp;node&nbsp;to&nbsp;be&nbsp;translated&nbsp;to&nbsp;PL/0.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Statement_Var">class <strong>Statement_Var</strong></a>(<a href="translator.nodes.html#Node">Node</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Var&nbsp;<a href="#Statement">Statement</a>&nbsp;node&nbsp;type&nbsp;from&nbsp;the&nbsp;Grammar.&nbsp;&nbsp;Used&nbsp;to&nbsp;hold&nbsp;a&nbsp;collection&nbsp;of&nbsp;declarations.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Statement_Var-__init__"><strong>__init__</strong></a>(self, compiler<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Statement_Var-build"><strong>build</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statement_Var-compile"><strong>compile</strong></a>(self, indent)</dt></dl>
+
+<hr>
+Methods inherited from <a href="translator.nodes.html#Node">Node</a>:<br>
+<dl><dt><a name="Statement_Var-clean"><strong>clean</strong></a>(self)</dt><dd><tt>Prepare&nbsp;the&nbsp;node&nbsp;to&nbsp;be&nbsp;translated&nbsp;to&nbsp;PL/0.</tt></dd></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

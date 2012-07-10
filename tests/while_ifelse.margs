@@ -1,0 +1,9 @@
+var aa = 1, x = 3;
+while(aa <= 4){
+    if(aa == 4){
+        OUTPUT 4;
+    } else {
+        x = x + 1;
+    }
+    aa = aa + 1;
+}

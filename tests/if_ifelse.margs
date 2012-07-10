@@ -1,0 +1,7 @@
+if(1 == 1){
+  if(2 == 2){
+    OUTPUT 55;
+  } else {
+    OUTPUT 66;
+  }
+}

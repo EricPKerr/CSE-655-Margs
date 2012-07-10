@@ -1,0 +1,10 @@
+var a;
+
+function test(){
+  a = a + 1;
+}
+
+a = 50;
+test();
+test();
+OUTPUT a;

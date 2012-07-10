@@ -1,0 +1,9 @@
+function test(a){
+  var b, c;
+  b = 0;
+  if(b == 0){
+    OUTPUT 50;
+  }
+}
+
+test(5);

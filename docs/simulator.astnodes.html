@@ -1,0 +1,878 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module simulator.astnodes</title><link rel="stylesheet" type="text/css" href="style.css" />
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading" class="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="simulator.html"><font color="#ffffff">simulator</font></a>.astnodes</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href="index.html">index</a><br><a href="file:/Users/ericpkerr/Desktop/PL0/simulator/astnodes.py">/Users/ericpkerr/Desktop/PL0/simulator/astnodes.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="simulator.astnodes.html#ASTNode">ASTNode</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="simulator.astnodes.html#Block">Block</a>
+</font></dt><dt><font face="helvetica, arial"><a href="simulator.astnodes.html#Condition">Condition</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="simulator.astnodes.html#BinaryCondition">BinaryCondition</a>
+</font></dt><dt><font face="helvetica, arial"><a href="simulator.astnodes.html#OddCondition">OddCondition</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="simulator.astnodes.html#Expression">Expression</a>
+</font></dt><dt><font face="helvetica, arial"><a href="simulator.astnodes.html#Factor">Factor</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="simulator.astnodes.html#ExprFactor">ExprFactor</a>
+</font></dt><dt><font face="helvetica, arial"><a href="simulator.astnodes.html#IdFactor">IdFactor</a>
+</font></dt><dt><font face="helvetica, arial"><a href="simulator.astnodes.html#NumFactor">NumFactor</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="simulator.astnodes.html#Procedure">Procedure</a>
+</font></dt><dt><font face="helvetica, arial"><a href="simulator.astnodes.html#Program">Program</a>
+</font></dt><dt><font face="helvetica, arial"><a href="simulator.astnodes.html#Statement">Statement</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="simulator.astnodes.html#AssignStatement">AssignStatement</a>
+</font></dt><dt><font face="helvetica, arial"><a href="simulator.astnodes.html#CallStatement">CallStatement</a>
+</font></dt><dt><font face="helvetica, arial"><a href="simulator.astnodes.html#IfStatement">IfStatement</a>
+</font></dt><dt><font face="helvetica, arial"><a href="simulator.astnodes.html#InputStatement">InputStatement</a>
+</font></dt><dt><font face="helvetica, arial"><a href="simulator.astnodes.html#PrintStatement">PrintStatement</a>
+</font></dt><dt><font face="helvetica, arial"><a href="simulator.astnodes.html#SeqStatement">SeqStatement</a>
+</font></dt><dt><font face="helvetica, arial"><a href="simulator.astnodes.html#WhileStatement">WhileStatement</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="simulator.astnodes.html#Term">Term</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ASTNode">class <strong>ASTNode</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ASTNode-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="ASTNode-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ASTNode-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="ASTNode-__repr__"><strong>__repr__</strong></a> = <a href="#ASTNode-__str__">__str__</a>(self)</dt></dl>
+
+<dl><dt><a name="ASTNode-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="AssignStatement">class <strong>AssignStatement</strong></a>(<a href="simulator.astnodes.html#Statement">Statement</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#AssignStatement">AssignStatement</a></dd>
+<dd><a href="simulator.astnodes.html#Statement">Statement</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="AssignStatement-__init__"><strong>__init__</strong></a>(self, n, e)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>expr</strong> = None</dl>
+
+<dl><dt><strong>name</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="AssignStatement-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="AssignStatement-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="AssignStatement-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="AssignStatement-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BinaryCondition">class <strong>BinaryCondition</strong></a>(<a href="simulator.astnodes.html#Condition">Condition</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#BinaryCondition">BinaryCondition</a></dd>
+<dd><a href="simulator.astnodes.html#Condition">Condition</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="BinaryCondition-__init__"><strong>__init__</strong></a>(self, lhs, rhs, c)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>cmp</strong> = None</dl>
+
+<dl><dt><strong>lhs_expr</strong> = None</dl>
+
+<dl><dt><strong>rhs_expr</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="BinaryCondition-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="BinaryCondition-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="BinaryCondition-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="BinaryCondition-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Block">class <strong>Block</strong></a>(<a href="simulator.astnodes.html#ASTNode">ASTNode</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#Block">Block</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Block-__init__"><strong>__init__</strong></a>(self, cnames, cvalues, vnames, ps, s)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>const_names</strong> = []</dl>
+
+<dl><dt><strong>const_values</strong> = []</dl>
+
+<dl><dt><strong>procs</strong> = []</dl>
+
+<dl><dt><strong>stmt</strong> = None</dl>
+
+<dl><dt><strong>var_names</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="Block-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="Block-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="Block-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="Block-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CallStatement">class <strong>CallStatement</strong></a>(<a href="simulator.astnodes.html#Statement">Statement</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#CallStatement">CallStatement</a></dd>
+<dd><a href="simulator.astnodes.html#Statement">Statement</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="CallStatement-__init__"><strong>__init__</strong></a>(self, p)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>proc_name</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="CallStatement-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="CallStatement-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="CallStatement-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="CallStatement-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Condition">class <strong>Condition</strong></a>(<a href="simulator.astnodes.html#ASTNode">ASTNode</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#Condition">Condition</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Condition-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="Condition-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="Condition-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="Condition-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="Condition-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ExprFactor">class <strong>ExprFactor</strong></a>(<a href="simulator.astnodes.html#Factor">Factor</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#ExprFactor">ExprFactor</a></dd>
+<dd><a href="simulator.astnodes.html#Factor">Factor</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ExprFactor-__init__"><strong>__init__</strong></a>(self, e)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>expr</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="ExprFactor-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="ExprFactor-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="ExprFactor-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="ExprFactor-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Expression">class <strong>Expression</strong></a>(<a href="simulator.astnodes.html#ASTNode">ASTNode</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#Expression">Expression</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Expression-__init__"><strong>__init__</strong></a>(self, s, t)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>signs</strong> = []</dl>
+
+<dl><dt><strong>terms</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="Expression-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="Expression-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="Expression-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="Expression-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Factor">class <strong>Factor</strong></a>(<a href="simulator.astnodes.html#ASTNode">ASTNode</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#Factor">Factor</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Factor-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="Factor-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="Factor-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="Factor-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="Factor-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="IdFactor">class <strong>IdFactor</strong></a>(<a href="simulator.astnodes.html#Factor">Factor</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#IdFactor">IdFactor</a></dd>
+<dd><a href="simulator.astnodes.html#Factor">Factor</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="IdFactor-__init__"><strong>__init__</strong></a>(self, n)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>name</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="IdFactor-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="IdFactor-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="IdFactor-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="IdFactor-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="IfStatement">class <strong>IfStatement</strong></a>(<a href="simulator.astnodes.html#Statement">Statement</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#IfStatement">IfStatement</a></dd>
+<dd><a href="simulator.astnodes.html#Statement">Statement</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="IfStatement-__init__"><strong>__init__</strong></a>(self, c, st)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>cond</strong> = None</dl>
+
+<dl><dt><strong>stmt</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="IfStatement-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="IfStatement-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="IfStatement-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="IfStatement-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="InputStatement">class <strong>InputStatement</strong></a>(<a href="simulator.astnodes.html#Statement">Statement</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#InputStatement">InputStatement</a></dd>
+<dd><a href="simulator.astnodes.html#Statement">Statement</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="InputStatement-__init__"><strong>__init__</strong></a>(self, e)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>variable</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="InputStatement-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="InputStatement-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="InputStatement-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="InputStatement-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NumFactor">class <strong>NumFactor</strong></a>(<a href="simulator.astnodes.html#Factor">Factor</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#NumFactor">NumFactor</a></dd>
+<dd><a href="simulator.astnodes.html#Factor">Factor</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="NumFactor-__init__"><strong>__init__</strong></a>(self, n)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>number</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="NumFactor-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="NumFactor-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="NumFactor-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="NumFactor-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="OddCondition">class <strong>OddCondition</strong></a>(<a href="simulator.astnodes.html#Condition">Condition</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#OddCondition">OddCondition</a></dd>
+<dd><a href="simulator.astnodes.html#Condition">Condition</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="OddCondition-__init__"><strong>__init__</strong></a>(self, e)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>expr</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="OddCondition-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="OddCondition-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="OddCondition-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="OddCondition-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PrintStatement">class <strong>PrintStatement</strong></a>(<a href="simulator.astnodes.html#Statement">Statement</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#PrintStatement">PrintStatement</a></dd>
+<dd><a href="simulator.astnodes.html#Statement">Statement</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PrintStatement-__init__"><strong>__init__</strong></a>(self, e)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>expr</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="PrintStatement-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="PrintStatement-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="PrintStatement-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="PrintStatement-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Procedure">class <strong>Procedure</strong></a>(<a href="simulator.astnodes.html#ASTNode">ASTNode</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#&nbsp;this&nbsp;is&nbsp;the&nbsp;only&nbsp;<a href="#ASTNode">ASTNode</a>&nbsp;that&nbsp;doesn't&nbsp;correrspond&nbsp;to&nbsp;one&nbsp;of&nbsp;the<br>
+#&nbsp;non-terminals&nbsp;(or&nbsp;a&nbsp;subclass&nbsp;of&nbsp;a&nbsp;non-terminals)&nbsp;of&nbsp;the&nbsp;grammer.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#Procedure">Procedure</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Procedure-__init__"><strong>__init__</strong></a>(self, n, blk)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>block</strong> = None</dl>
+
+<dl><dt><strong>name</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="Procedure-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="Procedure-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="Procedure-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="Procedure-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Program">class <strong>Program</strong></a>(<a href="simulator.astnodes.html#ASTNode">ASTNode</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#Program">Program</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Program-__init__"><strong>__init__</strong></a>(self, blk)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>block</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="Program-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="Program-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="Program-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="Program-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SeqStatement">class <strong>SeqStatement</strong></a>(<a href="simulator.astnodes.html#Statement">Statement</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#SeqStatement">SeqStatement</a></dd>
+<dd><a href="simulator.astnodes.html#Statement">Statement</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SeqStatement-__init__"><strong>__init__</strong></a>(self, sts)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>stmts</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="SeqStatement-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="SeqStatement-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="SeqStatement-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="SeqStatement-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Statement">class <strong>Statement</strong></a>(<a href="simulator.astnodes.html#ASTNode">ASTNode</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#Statement">Statement</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Statement-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="Statement-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="Statement-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="Statement-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="Statement-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Term">class <strong>Term</strong></a>(<a href="simulator.astnodes.html#ASTNode">ASTNode</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#Term">Term</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Term-__init__"><strong>__init__</strong></a>(self, s, f)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>factors</strong> = []</dl>
+
+<dl><dt><strong>signs</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="Term-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="Term-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="Term-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="Term-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="WhileStatement">class <strong>WhileStatement</strong></a>(<a href="simulator.astnodes.html#Statement">Statement</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="simulator.astnodes.html#WhileStatement">WhileStatement</a></dd>
+<dd><a href="simulator.astnodes.html#Statement">Statement</a></dd>
+<dd><a href="simulator.astnodes.html#ASTNode">ASTNode</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="WhileStatement-__init__"><strong>__init__</strong></a>(self, c, st)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>cond</strong> = None</dl>
+
+<dl><dt><strong>stmt</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><a name="WhileStatement-__getitem__"><strong>__getitem__</strong></a>(self, i)</dt><dd><tt>#&nbsp;support&nbsp;subscription</tt></dd></dl>
+
+<dl><dt><a name="WhileStatement-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>#&nbsp;support&nbsp;iteration</tt></dd></dl>
+
+<dl><dt><a name="WhileStatement-__repr__"><strong>__repr__</strong></a> = __str__(self)</dt></dl>
+
+<dl><dt><a name="WhileStatement-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="simulator.astnodes.html#ASTNode">ASTNode</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

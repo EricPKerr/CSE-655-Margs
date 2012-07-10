@@ -1,0 +1,3 @@
+var a;
+INPUT a;
+OUTPUT a + a;

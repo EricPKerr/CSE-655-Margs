@@ -1,0 +1,8 @@
+function test(a){
+  var b;
+  b = 5;
+  b = a + b;
+  OUTPUT b;
+}
+
+test(50);

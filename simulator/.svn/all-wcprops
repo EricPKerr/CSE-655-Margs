@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/!svn/ver/11/trunk/src
+END
+pypl0_main.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/10/trunk/src/pypl0_main.py
+END
+pypl0_scanner.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2/trunk/src/pypl0_scanner.py
+END
+pypl0_x86codegentpl.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/src/pypl0_x86codegentpl.py
+END
+pypl0_x86codegen.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/10/trunk/src/pypl0_x86codegen.py
+END
+pypl0_parser.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/11/trunk/src/pypl0_parser.py
+END
+pypl0_astnodes.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2/trunk/src/pypl0_astnodes.py
+END
+pypl0_utils.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2/trunk/src/pypl0_utils.py
+END
+pypl0_interp.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2/trunk/src/pypl0_interp.py
+END
+pypl0_astgen.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/9/trunk/src/pypl0_astgen.py
+END

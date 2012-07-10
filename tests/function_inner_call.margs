@@ -1,0 +1,9 @@
+function test(a){
+  other(a);
+}
+
+function other(b){
+  OUTPUT b + 5;
+}
+
+test(20);

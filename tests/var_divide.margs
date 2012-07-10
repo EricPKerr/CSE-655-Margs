@@ -1,0 +1,4 @@
+var x, y;
+x = 6;
+y = 24;
+OUTPUT y / x;

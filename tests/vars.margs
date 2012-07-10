@@ -1,0 +1,4 @@
+var x, y;
+x = 200;
+y = 300;
+OUTPUT x + y;

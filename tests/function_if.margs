@@ -1,0 +1,7 @@
+function test(a){
+  if(a == 50){
+    OUTPUT a;
+  }
+}
+
+test(50);

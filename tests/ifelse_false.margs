@@ -1,0 +1,5 @@
+if(0 == 1){
+  OUTPUT 100;
+} else {
+  OUTPUT 200;
+}

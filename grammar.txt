@@ -1,0 +1,34 @@
+<program>               ->  <elements> | empty_string
+<elements>              ->  <element> | <elements> <element>
+<element>               ->  <statement> | <function>
+
+<statement_list>        ->  <statement> | <statement_list> <statement>
+<statement>             ->  <statement_block> | <statement_var> | <statement_conditional> | <statement_io> | <statement_fn_call> | <statement_iteration> | <statement_return> | <statement_empty>
+<statement_block>       ->  "{" "}" | "{" <statement_list> "}"
+<statement_var>         ->  "var" <declaration_list> ";" | "const" <declaration_list> ";" | <declaration_list> ";"
+<statement_conditional> ->  "if" "(" <condition> ")" <statement> "else" <statement> | "if" "(" <condition> ")" <statement>
+<statement_io>          ->  "INPUT" <identifier> ";" | "OUTPUT" <expression> ";"
+<statement_fn_call>     ->  <identifier> "(" <parameters> ")" ";" | <identifier> "(" ")" ";"
+<statement_iteration>   ->  "while" "(" <condition> ")" <statement>
+###<statement_return>   ->  "return" ";" | "return" <expression> ";"
+<statement_empty>       ->  ";"
+
+<function>              ->  "function" <identifier> "(" <parameters> ")" "{" <statement_list> "}" | "function" <identifier> "(" ")" "{" <statement_list> "}"
+<parameters>            ->  <identifier> | <parameters> "," <identifier> | <number> | <parameters> "," <number>
+
+<declaration_list>      ->  <declaration> | <declaration_list> "," <declaration>
+<declaration>           ->  <identifier> | <identifier> "=" <expression>
+<expression>            ->  "true" | "false" | <identifier> | <term_list>
+<term_list>             ->  <term> | <addsub> <term> {<addsub> <term>}
+<term>                  ->  <factor> {<muldiv> <factor>}
+<factor>                ->  <identifier> | <number> | "(" <term_list> ")"
+
+<condition>             ->  <expression> <comparison> <expression> | "true" | "false"
+<comparison>            ->  "<" | "<=" | ">" | ">=" | "==" | "!="
+
+<addsub>                ->  "+" | "-"
+<muldiv>                ->  "*" | "/"
+<identifier>            ->  [a-z] {[a-z]}
+<number>                ->  "-" <num> | <num>
+<num>                   ->  <digits> | <digits> "." <digits>
+<digits>                ->  [0-9] {[0-9]}

@@ -1,0 +1,143 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module simulator.scanner</title><link rel="stylesheet" type="text/css" href="style.css" />
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading" class="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="simulator.html"><font color="#ffffff">simulator</font></a>.scanner</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href="index.html">index</a><br><a href="file:/Users/ericpkerr/Desktop/PL0/simulator/scanner.py">/Users/ericpkerr/Desktop/PL0/simulator/scanner.py</a></font></td></tr></table>
+    <p><tt>##&nbsp;SCANNER</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="simulator.scanner.html#Token">Token</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Token">class <strong>Token</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Tokentype&nbsp;is&nbsp;one&nbsp;of&nbsp;(ID,&nbsp;NUM,&nbsp;DOT,&nbsp;CONST,&nbsp;EQUAL,<br>
+COMMA,&nbsp;SEMI,&nbsp;VAR,&nbsp;PROCEDURE,&nbsp;ASSIGN,&nbsp;INPUT,&nbsp;CALL,&nbsp;BEGIN,&nbsp;END,<br>
+IF,&nbsp;THEN,&nbsp;WHILE,&nbsp;DO,&nbsp;ODD,&nbsp;HASH,&nbsp;LT,&nbsp;LTEQ,&nbsp;GT,&nbsp;GTEQ,<br>
+PLUS,&nbsp;MINUS,&nbsp;MUL,&nbsp;DIV,&nbsp;LPAREN,&nbsp;RPAREN,&nbsp;EXCLAIM,&nbsp;EOF,&nbsp;ILLEGAL).<br>
+Please&nbsp;DO&nbsp;NOT&nbsp;touch&nbsp;this&nbsp;doc&nbsp;string.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Token-__init__"><strong>__init__</strong></a>(self, txt, tktp, linenum)</dt></dl>
+
+<dl><dt><a name="Token-__repr__"><strong>__repr__</strong></a> = <a href="#Token-__str__">__str__</a>(self)</dt></dl>
+
+<dl><dt><a name="Token-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>ASSIGN</strong> = 'ASSIGN'</dl>
+
+<dl><dt><strong>BEGIN</strong> = 'BEGIN'</dl>
+
+<dl><dt><strong>CALL</strong> = 'CALL'</dl>
+
+<dl><dt><strong>COMMA</strong> = 'COMMA'</dl>
+
+<dl><dt><strong>CONST</strong> = 'CONST'</dl>
+
+<dl><dt><strong>DIV</strong> = 'DIV'</dl>
+
+<dl><dt><strong>DO</strong> = 'DO'</dl>
+
+<dl><dt><strong>DOT</strong> = 'DOT'</dl>
+
+<dl><dt><strong>END</strong> = 'END'</dl>
+
+<dl><dt><strong>EOF</strong> = 'EOF'</dl>
+
+<dl><dt><strong>EQUAL</strong> = 'EQUAL'</dl>
+
+<dl><dt><strong>EXCLAIM</strong> = 'EXCLAIM'</dl>
+
+<dl><dt><strong>GT</strong> = 'GT'</dl>
+
+<dl><dt><strong>GTEQ</strong> = 'GTEQ'</dl>
+
+<dl><dt><strong>HASH</strong> = 'HASH'</dl>
+
+<dl><dt><strong>ID</strong> = 'ID'</dl>
+
+<dl><dt><strong>IF</strong> = 'IF'</dl>
+
+<dl><dt><strong>ILLEGAL</strong> = 'ILLEGAL'</dl>
+
+<dl><dt><strong>INPUT</strong> = 'INPUT'</dl>
+
+<dl><dt><strong>LPAREN</strong> = 'LPAREN'</dl>
+
+<dl><dt><strong>LT</strong> = 'LT'</dl>
+
+<dl><dt><strong>LTEQ</strong> = 'LTEQ'</dl>
+
+<dl><dt><strong>MINUS</strong> = 'MINUS'</dl>
+
+<dl><dt><strong>MUL</strong> = 'MUL'</dl>
+
+<dl><dt><strong>NUM</strong> = 'NUM'</dl>
+
+<dl><dt><strong>ODD</strong> = 'ODD'</dl>
+
+<dl><dt><strong>PLUS</strong> = 'PLUS'</dl>
+
+<dl><dt><strong>PROCEDURE</strong> = 'PROCEDURE'</dl>
+
+<dl><dt><strong>RPAREN</strong> = 'RPAREN'</dl>
+
+<dl><dt><strong>SEMI</strong> = 'SEMI'</dl>
+
+<dl><dt><strong>THEN</strong> = 'THEN'</dl>
+
+<dl><dt><strong>VAR</strong> = 'VAR'</dl>
+
+<dl><dt><strong>WHILE</strong> = 'WHILE'</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-init"><strong>init</strong></a>(f)</dt><dd><tt>Call&nbsp;this&nbsp;when&nbsp;before&nbsp;a&nbsp;new&nbsp;parsing&nbsp;occurs.<br>
+Usually&nbsp;this&nbsp;is&nbsp;done&nbsp;by&nbsp;the&nbsp;parser.</tt></dd></dl>
+ <dl><dt><a name="-lookahead"><strong>lookahead</strong></a>(n<font color="#909090">=1</font>)</dt></dl>
+ <dl><dt><a name="-nexttoken"><strong>nexttoken</strong></a>()</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>literal_words</strong> = {'!': 'EXCLAIM', '#': 'HASH', '(': 'LPAREN', ')': 'RPAREN', '*': 'MUL', '+': 'PLUS', ',': 'COMMA', '-': 'MINUS', '.': 'DOT', '/': 'DIV', ...}</td></tr></table>
+</body></html>

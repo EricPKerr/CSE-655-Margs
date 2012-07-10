@@ -1,0 +1,3 @@
+var x;
+x = 200;
+OUTPUT x;
